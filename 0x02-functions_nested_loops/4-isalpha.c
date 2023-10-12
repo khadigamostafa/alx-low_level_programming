@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
-*the desciption of the function (_is lower)  - function check
-*                 if character is lower case
-* @c :chechs input of function
+*_isalpha  - is a function to check if character is lower case or upper
+*@c :check input of function
  *Return: returns 1 if c is lowercase, otherwise is 0
  */
-int _islower(int c)
+int _isalpha(int c)
 {
 	if (c >= 97 && c <= 122)
+		return (1);
+	if (c >= 65 && c <= 90)
 		return (1);
 	return (0);
 }
