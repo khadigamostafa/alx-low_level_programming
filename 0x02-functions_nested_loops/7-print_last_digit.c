@@ -1,18 +1,21 @@
 #include "main.h"
 
 /**
-* print_last_digit - print the last digit of number
-*@int: takes integer type  input for function  print_last_digit
- *Return: returns last digit
- */
-int print_last_digit(int)
+*jack_bauer - print every minutes of the day
+*/
+void jack_bauer(void)
 {
-	int last_digit;
-
-	if (n < 0)
-		last_digit = (-1) * (n % 10);
-	else
-		last_digit = n % 10;
-	_putchar(last_digit + '0');
-	return (last_digit);
+	int min, hr;
+	for (hr = 0; hr <= 23; hr++)
+	{
+		for (min = 0; min <= 59; min++)
+		{
+			_putchar(( hr / 10) + 48);
+			_putchar(( hr % 10) + 48);
+			_putchar(':');
+			_putchar(( min / 10) + 48);_putchar(( min % 10) + 48);
+			_putchar('\n' );
+		}
+        }
 }
+
