@@ -23,5 +23,5 @@ char *_strstr(char *haystack, char *needle)
 		if (*num2 == '\0')
 			return (haystack);
 	}
-	return (null);
+	return ('\0');
 }
