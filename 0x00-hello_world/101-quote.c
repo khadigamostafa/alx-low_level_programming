@@ -1,9 +1,7 @@
 #include<unistd.h>
 /*
- * function main - the main function describes the main common in all c program
- *                 it acts as an entry point ,it returns 1 and recieve nothing
- *                 main - the main function
- * description :print a quote by using write function
+ *main - is the entry point of a program where the execution of a program start
+ *the main function serves as the starting point for program execution.
  * write : is a function used to print
  * @arr :as array of type char
  * return: it will return 1
