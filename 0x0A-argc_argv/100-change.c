@@ -6,29 +6,30 @@
  * @argv: array contain the command line of the program
  * Return: it will return 0 if success
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	if (argc == 2)
-	{
-		int i, leastcents = 0, money = atoi(argv[1])
-		int cent[] = {25, 10, 5, 2, 1};
+	int cent,mincoin = 0;
 
-		for (i = 0; i < 5; i++)
-		{
-			if (money >= cent[i])
-			{
-				leastcents += money / cent[i];
-				money = money % cent[i];
-				if (money % cent[i] == 0)
-				break;
-			}
-		}
-		printf("%d\n", leastcents);
-	}
-	else
+	if (argc == 1 || argc > 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	cent = atoi(argv[1]);
+	while (cent > 0)
+	{
+		if (cent >= 25)
+			cent -= 25;
+		if (cent >= 10)
+			cent -= 10;
+		if (cent >= 5)
+			cent -= 5;
+		if (cent >= 2)
+			cent -= 2;
+		if (cent >= 1)
+			cent -= 1;
+		mincoin += 1;
+	}
+	printf("%d\n", mincoin);
 	return (0);
 }
