@@ -6,7 +6,7 @@
  * @argv: array contain the command line of the program
  * Return: it will return 0 if success
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int cent,mincoin = 0;
 
@@ -16,6 +16,7 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	cent = atoi(argv[1]);
+
 	while (cent > 0)
 	{
 		if (cent >= 25)
